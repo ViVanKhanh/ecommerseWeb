@@ -1,0 +1,16 @@
+@import '@styles/_mixin.module.scss';
+
+.btn {
+    @include btn(176px, 42px, 3px, #333);
+    color: #fff;
+    font-weight: 400;
+    font-size: 14px;
+    padding: 13px 45px;
+    cursor: pointer;
+    &:hover{
+        background-color: #ebe6e3;
+        border: 1px solid #333;
+        color: #333;
+        transition: background-color 300ms;
+    }
+}
