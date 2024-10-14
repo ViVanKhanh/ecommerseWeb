@@ -1,0 +1,42 @@
+@import '@styles/_variable.module.scss';
+@import '@styles/_mixin.module.scss';
+
+
+.container {
+    @include flex_box_custom(center, center, 0px);
+   
+}
+.content {
+    @include flex_box_custom(center, center, 0px);
+    width: 100%;
+    margin: 65px 0px 15px;
+}
+.headLine {
+    height: 2px;
+    width: 100%;
+    border-top: 1px solid #e1e1e1;
+    border-bottom: 1px solid #e1e1e1;
+    margin-top: 40px;
+}
+.containerMiddleBox {
+    width: 100%;
+    text-align: center;
+    color: #333333;
+    font-size: 24px;
+    line-height: 32px;
+
+}
+
+.des {
+    font-size: 14px;
+    text-transform: uppercase;
+    line-height: 26px;
+    color: #555555;
+}
+.title {
+    color: #333333;
+    font-family: "Roboto Mono", Sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 32px;
+}

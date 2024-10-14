@@ -1,0 +1,28 @@
+@import '@styles/_variable.module.scss';
+@import '@styles/_mixin.module.scss';
+
+.container {
+    background-image: url('@icons/images/img1.jpeg');
+    background-size: cover;
+    background-position: center;
+    height: 409px;
+    width: calc(100% / 2);
+}
+.containerTimer {
+    @include flex_box_custom(center, center, 10px);
+}
+.title {
+    text-align: center;
+    color: #222222;
+    font-size: 28px;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 40px;
+}
+.boxBtn {
+    margin-top: 20px;
+    text-align: center;
+    &:hover {
+        background-color: transparent;
+    }
+}
