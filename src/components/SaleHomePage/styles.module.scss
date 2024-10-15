@@ -1,0 +1,42 @@
+@import '@styles/mixin.module';
+@import '@styles/variable.module';
+
+.container {
+    @include flex_box_custom(space-evenly, center, 0px);
+    margin-top: 100px;
+    text-align: center;
+    align-content: center;
+
+
+    .boxImg {
+        @include flex_box_custom(center, center, 0px);
+        width: 100%;
+        img{
+            max-width:  100%;
+        }
+    }
+}
+.boxContent {
+
+    flex: 1 1 45%; // Kích thước linh hoạt tương tự .boxImg
+    padding: 15px; // Thêm khoảng cách cho nội dung
+    max-width: 400px; // Đặt giới hạn tối đa cho kích thước để tránh quá rộng
+    width: 100%; // Đảm bảo có thể giãn nở với không gian có sẵn
+    margin: 0 60px;
+    box-sizing: border-box;
+    .title {
+        color: #222222;
+        font-size: 35px;
+        font-weight: 400;
+        text-transform: capitalize;
+        line-height: 46px;
+    }
+    .des {
+        text-align: center;
+        color: #555555;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 26px;
+        margin: 40px 0;
+    }
+}
