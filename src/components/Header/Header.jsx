@@ -6,10 +6,22 @@ import Logo from '@icons/images/Logo-retina.png';
 import reload from '@icons/svgs/reload.svg';
 import heart from '@icons/svgs/heart.svg';
 import cartIcon from '@icons/svgs/cartIcon.svg';
+import { useContext } from 'react';
+import { SideBarContext } from '@/contexts/SideBarProvider';
 
 function MyHeader() {
-    const { containerBoxIcon, containerMenu, containerHeader, containerBox, container } =
-        styles;
+    const {
+        containerBoxIcon,
+        containerMenu,
+        containerHeader,
+        containerBox,
+        container
+    } = styles;
+
+    const {isOpen, setIsOpen} = useContext(SideBarContext)
+
+
+    
     return (
         <div className={container}>
             <div className={containerHeader}>
@@ -32,7 +44,8 @@ function MyHeader() {
                                     key={index}
                                     content={item.content}
                                     href={item.href}
-                                ></Menu>
+                                    
+                                />
                             );
                         })}
                     </div>
@@ -55,6 +68,7 @@ function MyHeader() {
                                             key={index}
                                             content={item.content}
                                             href={item.href}
+                                            setIsOpen={setIsOpen}
                                         ></Menu>
                                     );
                                 })}
