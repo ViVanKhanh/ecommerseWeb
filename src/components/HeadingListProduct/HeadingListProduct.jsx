@@ -6,8 +6,6 @@ import ProductItem from '@components/ProductItem/ProductItem';
 function HeadingListProduct({data}) {
     const { container, containerItem } = styles;
 
-
-
     
     return (
         <MainLayout>

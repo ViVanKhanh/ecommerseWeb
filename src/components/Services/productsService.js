@@ -3,6 +3,7 @@ const getProducts = async () => {
     const res = await axiosClient('/product');
 
 
+    
     return res.data.contents
     
 }

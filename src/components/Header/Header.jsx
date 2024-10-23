@@ -18,9 +18,13 @@ function MyHeader() {
         container
     } = styles;
 
-    const {isOpen, setIsOpen} = useContext(SideBarContext)
+    const {isOpen, setIsOpen, setType} = useContext(SideBarContext)
 
 
+    const handleOpenSideBar = (type) => {
+        setIsOpen(true)
+        setType(type)
+    }
     
     return (
         <div className={container}>
@@ -74,9 +78,9 @@ function MyHeader() {
                                 })}
                         </div>
                         <div className={containerBoxIcon}>
-                            <img src={reload} alt='' />
-                            <img src={heart} alt='' />
-                            <img src={cartIcon} alt='' />
+                            <img src={reload} alt='' onClick={() => handleOpenSideBar('compare')}/>
+                            <img src={heart} alt='' onClick={() => handleOpenSideBar('wishlist')}/>
+                            <img src={cartIcon} alt='' onClick={() => handleOpenSideBar('card')}/>
                         </div>
                     </div>
                 </div>
