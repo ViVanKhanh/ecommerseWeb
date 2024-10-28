@@ -22,15 +22,22 @@
         transition: all 0.3s ease;
     }
     .boxContent {
-        @include flex_box_custom(center, flex-start, 10px);
+        @include flex_box_custom(center, flex-start, 0px);
         flex-direction: column;
         .title {
             font-size: 16px;
             color: $primary-color;
         }
+        .size{
+             color: #9e9e9e;
+             margin-top: 7px;
+             margin-bottom: 10px;
+             font-size: 14px;
+        }
         .price{
             font-size: 14px;
             color: #222222;
+            margin-bottom: 7px;
         }
     }
     &:hover{
@@ -38,5 +45,12 @@
         .boxClose{
             transform: translateX(0);
         }
+    }
+    &:first-child {
+        margin-top: 40px; 
+    }
+
+    &:not(:first-child) {
+        margin-top: 0; 
     }
 }

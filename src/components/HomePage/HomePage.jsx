@@ -29,7 +29,7 @@ function HomePage() {
                 <Banner />
                 <Infor />
                 <AdvanceHeading />
-                <HeadingListProduct data={listProduct.slice(1, 3)}/>
+                <HeadingListProduct data={listProduct.slice(0, 2)}/>
                 <PopularProducts data={listProduct.slice(2, listProduct.length)}/>
                 <SaleHomePage/>
                 <MyFooter/>

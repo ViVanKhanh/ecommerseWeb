@@ -6,11 +6,14 @@
     @include flex_box_custom(space-between, space-between, 25px);
     flex-direction: column;
     height: 90vh;
-    
+    .total{
+        @include flex_box_custom(space-between, center, 0px);
+    }
     .boxButton {
         display: flex;
         justify-content: center;
-        margin-bottom: 20px;
+        margin-bottom: -20px;
+        margin-top: -90px;
 
         button {
             cursor: pointer;
